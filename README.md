@@ -41,7 +41,7 @@ Week 2:
 - Engine Allocators
 
 For a complete picture, view the full roadmap here:
-[Full Roadmap](Documentation/roadmap.md)
+[Full Roadmap](BasicVulkanEngine/Documentation/roadmap.md)
 
 ## Project Structure
 Core Layers, dependencies flow in order of appearance:
@@ -84,7 +84,7 @@ Clarity vs. Performance:
 
 ## Naming Conventions
 
-[Style Guide](Documentation/style_guide.md)
+[Style Guide](BasicVulkanEngine/Documentation/style_guide.md)
 
 ## Build
 Target Platform: (*currently*) only Windows
