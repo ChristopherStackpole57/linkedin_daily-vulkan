@@ -14,6 +14,9 @@ namespace vrender
 		{
 			// Configuration for Create Info
 			std::vector<std::string> extensions;
+			std::vector<std::string> layers;
+			std::vector<std::string> validation_layers{ "VK_LAYER_KHRONOS_validation"};
+			bool enable_validation = true;
 
 			// Configuration for Application Info
 			std::string application_name = "VulkanRendering";

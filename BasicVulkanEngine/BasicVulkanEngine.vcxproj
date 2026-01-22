@@ -103,6 +103,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Programming\Libraries\Cpp\Vulkan\Include;C:\Programming\Libraries\Cpp\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Configuration\VulkanConfig.h" />
+    <ClInclude Include="Source\RenderLayer\DebugDiagnostics.h" />
     <ClInclude Include="Source\RenderLayer\Instance.h" />
     <ClInclude Include="Source\RenderLayer\InstanceConfiguration.h" />
   </ItemGroup>
