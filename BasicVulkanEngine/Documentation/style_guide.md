@@ -25,7 +25,7 @@
 - Optional pointer clarity: `Device* device_ptr`
 
 #### 5. Member Variables
-- **snake_case**: `glfw_context`, `command_pool_`
+- **snake_case**: `glfw_context`, `command_pool`
 - Keep private unless necessary
 
 #### 6. Namespaces
@@ -58,6 +58,6 @@
 
 #### 11. Git / Commit Practices
 - One commit per logical change or (more likely) per day
-- Commit messages: `[Subsystem] Short description`
+- Commit messages: `[Subsystem] Day X: Short description`
 - Link commits to daily challenge posts if relevant
 - It is preferred that commit descriptions carry a little more information about what specifically was added

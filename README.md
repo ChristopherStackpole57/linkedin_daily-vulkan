@@ -26,19 +26,14 @@ Though a tough balance to strike, I am trying to make this project accessible to
 can understand what is happening well enough to hopefully provide me invaluable critiques. All the while being general enough that
 any non technical people can understand what is happening. 
 
-#### A Rough Outline of the Schedule:
+#### A Rough Outline of this Week's Schedule:
 Week 1:
-- Project Setup
-- Window Creation
-- Basic Validation and Debugging
-- Instance
-- PhysicalDevice
-- LogicalDevice
-
-Week 2:
-- Queue Discovery
-- Strong Feature/Extension Filtering and Selection
-- Engine Allocators
+- [x] Project Setup
+- [] Window Creation
+- [] Basic Validation and Debugging
+- [] Instance
+- [] PhysicalDevice
+- [] LogicalDevice
 
 For a complete picture, view the full roadmap here:
 [Full Roadmap](BasicVulkanEngine/Documentation/roadmap.md)
