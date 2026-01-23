@@ -6,8 +6,8 @@ This roadmap is intentionaly fluid and will be subject to revision and change as
 #### Week 1:
 - [x] Project Setup
 - [] Window Creation
-- [] Basic Validation and Debugging
-- [] Instance
+- [x] Basic Validation and Debugging
+- [x] Instance
 - [] PhysicalDevice
 - [] LogicalDevice
 

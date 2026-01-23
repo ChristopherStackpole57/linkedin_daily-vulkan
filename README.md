@@ -30,8 +30,8 @@ any non technical people can understand what is happening.
 Week 1:
 - [x] Project Setup
 - [] Window Creation
-- [] Basic Validation and Debugging
-- [] Instance
+- [x] Basic Validation and Debugging
+- [x] Instance
 - [] PhysicalDevice
 - [] LogicalDevice
 
