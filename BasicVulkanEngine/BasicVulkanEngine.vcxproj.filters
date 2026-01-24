@@ -18,7 +18,22 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\RenderLayer\Instance.cpp">
+    <ClCompile Include="src\RenderLayer\Instance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlatformLayer\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlatformLayer\WindowBackends\GLFWWindowSurfaceProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlatformLayer\WindowBackends\WIN32WindowSurfaceProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlatformLayer\WindowBackends\SDLWindowSurfaceProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlatformLayer\WindowBackends\SFMLWindowSurfaceProvider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,13 +41,31 @@
     <ClInclude Include="Configuration\VulkanConfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\RenderLayer\Instance.h">
+    <ClInclude Include="src\RenderLayer\Instance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\RenderLayer\InstanceConfiguration.h">
+    <ClInclude Include="src\RenderLayer\InstanceConfiguration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\RenderLayer\DebugDiagnostics.h">
+    <ClInclude Include="src\RenderLayer\DebugDiagnostics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformLayer\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformLayer\WindowBackends\WindowSurfaceProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformLayer\WindowBackends\GLFWWindowSurfaceProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformLayer\WindowBackends\WIN32WindowSurfaceProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformLayer\WindowBackends\SDLWindowSurfaceProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformLayer\WindowBackends\SFMLWindowSurfaceProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -40,5 +73,11 @@
     <None Include="..\README.md" />
     <None Include="Documentation\style_guide.md" />
     <None Include="Documentation\roadmap.md" />
+    <None Include="Documentation\RenderLayer\instance.md" />
+    <None Include="Documentation\RenderLayer\instance_config.md" />
+    <None Include="Documentation\RenderLayer\debug_diagnostics.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
 </Project>

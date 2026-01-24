@@ -102,14 +102,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Programming\Libraries\Cpp\Vulkan\Include;C:\Programming\Libraries\Cpp\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Programming\Projects\Cpp\VS22\LinkedIn\BasicVulkanEngine\linkedin_daily-vulkan\BasicVulkanEngine\external\glfw\include;C:\Programming\Libraries\Cpp\Vulkan\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Programming\Libraries\Cpp\Vulkan\Lib;C:\Programming\Libraries\Cpp\glfw-3.4.bin.WIN64\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Programming\Libraries\Cpp\Vulkan\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,22 +127,48 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\RenderLayer\Instance.cpp" />
+    <ClCompile Include="src\PlatformLayer\WindowBackends\SFMLWindowSurfaceProvider.cpp" />
+    <ClCompile Include="src\PlatformLayer\WindowBackends\SDLWindowSurfaceProvider.cpp" />
+    <ClCompile Include="src\PlatformLayer\WindowBackends\GLFWWindowSurfaceProvider.cpp" />
+    <ClCompile Include="src\RenderLayer\Instance.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\PlatformLayer\Window.cpp" />
+    <ClCompile Include="src\PlatformLayer\WindowBackends\WIN32WindowSurfaceProvider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Configuration\VulkanConfig.h" />
-    <ClInclude Include="Source\RenderLayer\DebugDiagnostics.h" />
-    <ClInclude Include="Source\RenderLayer\Instance.h" />
-    <ClInclude Include="Source\RenderLayer\InstanceConfiguration.h" />
+    <ClInclude Include="src\PlatformLayer\WindowBackends\SFMLWindowSurfaceProvider.h" />
+    <ClInclude Include="src\PlatformLayer\WindowBackends\SDLWindowSurfaceProvider.h" />
+    <ClInclude Include="src\PlatformLayer\WindowBackends\GLFWWindowSurfaceProvider.h" />
+    <ClInclude Include="src\RenderLayer\DebugDiagnostics.h" />
+    <ClInclude Include="src\RenderLayer\Instance.h" />
+    <ClInclude Include="src\RenderLayer\InstanceConfiguration.h" />
+    <ClInclude Include="src\PlatformLayer\Window.h" />
+    <ClInclude Include="src\PlatformLayer\WindowBackends\WindowSurfaceProvider.h" />
+    <ClInclude Include="src\PlatformLayer\WindowBackends\WIN32WindowSurfaceProvider.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
+    <None Include="Documentation\RenderLayer\debug_diagnostics.md">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Documentation\RenderLayer\instance.md">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Documentation\RenderLayer\instance_config.md">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Documentation\roadmap.md">
       <SubType>
       </SubType>
     </None>
     <None Include="Documentation\style_guide.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
