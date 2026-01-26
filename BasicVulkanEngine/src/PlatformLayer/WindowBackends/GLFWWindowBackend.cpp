@@ -44,6 +44,8 @@ vrender::platform::GLFWWindowBackend::GLFWWindowBackend()
 			};
 
 			backend->resize_state.resized = true;
+
+			// TODO: make updating the window size here also affect the stored window size (or just make the stored window size depend on the new resize.size)
 		}
 	);
 	glfwSetWindowUserPointer(this->glfw_window, this);

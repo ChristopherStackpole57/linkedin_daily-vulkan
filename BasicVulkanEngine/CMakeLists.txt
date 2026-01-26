@@ -7,13 +7,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(VRENDER_ROOT_DIR ${CMAKE_SOURCE_DIR}/src)
 
 add_library(vrender
-	"src/PlatformLayer/WindowBackends/GLFWWindowBackend.cpp"
-	"src/PlatformLayer/WindowBackends/SDLWindowBackend.cpp"
-	"src/PlatformLayer/WindowBackends/SFMLWindowBackend.cpp"
+"src/PlatformLayer/WindowBackends/GLFWWindowBackend.cpp"
+"src/PlatformLayer/WindowBackends/SDLWindowBackend.cpp"
+"src/PlatformLayer/WindowBackends/SFMLWindowBackend.cpp"
 
-	"src/RenderLayer/Instance.cpp"
-	"src/RenderLayer/Renderer.cpp"
-)
+"src/RenderLayer/Instance.cpp"
+"src/RenderLayer/Renderer.cpp"
+"src/RenderLayer/PhysicalDevice.cpp" 
+"src/RenderLayer/LogicalDevice.cpp" 
+
+"src/RenderLayer/Utility/PhysicalDeviceEnumeration.cpp" 
+"src/RenderLayer/Utility/SelectPhysicalDevice.cpp")
 
 find_package(Vulkan REQUIRED MODULE)
 target_link_libraries(vrender PUBLIC Vulkan::Vulkan)
@@ -78,5 +82,5 @@ target_include_directories(vrender PUBLIC
 	src/PlatformLayer/WindowBackends/
 )
 
-add_executable(vrender_test main.cpp "src/RenderLayer/Renderer.cpp")
+add_executable(vrender_test main.cpp "src/RenderLayer/Renderer.cpp" "src/RenderLayer/PhysicalDevice.cpp" "src/RenderLayer/LogicalDevice.cpp" "src/RenderLayer/Utility/PhysicalDeviceEnumeration.cpp" "src/RenderLayer/Utility/SelectPhysicalDevice.cpp")
 target_link_libraries(vrender_test PRIVATE vrender)

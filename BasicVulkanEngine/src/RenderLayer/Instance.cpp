@@ -163,6 +163,32 @@ VkInstance vrender::render::Instance::get_handle() const
 {
 	return this->instance;
 }
+std::vector<VkPhysicalDevice> vrender::render::Instance::query_physical_devices() const
+{
+	uint32_t count = 0;
+	std::vector<VkPhysicalDevice> devices;
+
+	VkResult enumeration_result = vkEnumeratePhysicalDevices(this->instance, &count, nullptr);
+	if (enumeration_result != VK_SUCCESS)
+	{
+		throw std::runtime_error("ERROR: Vulkan Instance Unable to Enumerate Physical Devices Phase One");
+	}
+
+	// Ensure that there are physical devices to query; eventually this will allow headless rendering
+	if (count == 0)
+	{
+		throw std::runtime_error("ERROR: Vulkan Has No Physical Devices at Instance Enumeration");
+	}
+
+	devices.resize(count);
+	enumeration_result = vkEnumeratePhysicalDevices(this->instance, &count, devices.data());
+	if (enumeration_result != VK_SUCCESS)
+	{
+		throw std::runtime_error("ERROR: Vulkan Instance Unable to Enumerate Physical Devices Phase Two");
+	}
+
+	return devices;
+}
 
 // Utility
 void vrender::render::Instance::check_layer_list_support(const std::vector<std::string>& layers)

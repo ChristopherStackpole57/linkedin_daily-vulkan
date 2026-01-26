@@ -78,6 +78,7 @@ int main()
 			// Mutate Engine State
 
 			// Render Step
+			renderer.step(*window_provider_ptr);
 		}
 	}
 

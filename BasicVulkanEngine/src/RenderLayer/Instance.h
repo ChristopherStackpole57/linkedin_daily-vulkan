@@ -28,7 +28,7 @@ namespace vrender
 
 			// API Accessibility
 			VkInstance get_handle() const;
-
+			std::vector<VkPhysicalDevice> query_physical_devices() const;
 		private:
 			VkInstance instance = VK_NULL_HANDLE;
 			VkDebugUtilsMessengerEXT debug_messenger = VK_NULL_HANDLE;

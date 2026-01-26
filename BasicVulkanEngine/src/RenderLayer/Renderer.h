@@ -8,6 +8,10 @@
 
 #include <RenderLayer/InstanceConfiguration.h>
 #include <RenderLayer/Instance.h>
+#include <RenderLayer/PhysicalDevice.h>
+
+#include <RenderLayer/Utility/SelectPhysicalDevice.h>
+#include <RenderLayer/Utility/PhysicalDeviceEnumeration.h>
 
 namespace vrender
 {
